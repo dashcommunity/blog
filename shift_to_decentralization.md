@@ -6,7 +6,7 @@ A preference and respect for decentralization cannot be taken for granted as the
 
 In order to assure sustainable growth, the fundamental principles that have made cryptocurrencies successful must be consciously protected.  This requires a shift from a centralized idea to a decentralized, community-driven collaborative project.  
 
-It must also be emphasized that centralization is not necessarily bad.  Centralized projects, in their incubation, can move efficiently because there is a simple governance model and pure ideas can be developed without excessive community deliberation.  They can also offer healthy financial incentives for early founding members to push through difficult start up challenges. T
+It must also be emphasized that centralization is not necessarily bad.  Centralized projects, in their incubation, can move efficiently because there is a simple governance model and pure ideas can be developed without excessive community deliberation.  They can also offer healthy financial incentives for early founding members to push through difficult start up challenges.
 
 However, to gain sustainable widespread adoption and resiliance to outside attacks and competition, centralization and heirarchical governance must yield to decentralization and distributed, networked governance.  Getting people to buid their ideas and projects on top of yours requires an explicit welcome to community collaboration and low barriers in making such connections...
 
