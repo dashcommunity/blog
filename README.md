@@ -1,4 +1,4 @@
-# Dash Community Blog
+# Blog
 
 ##### About this repository
 This repository holds blog entries (posts) for the Dash Community Blog.  Anyone can easily [create a blog entry]() and host it here.  
