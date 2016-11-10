@@ -1,3 +1,6 @@
+# Get Dash to Drive
+##### by Pete Eyre
+
 Being the behind-the-scenes guy at *DASH: Detailed*, I do my best to inform folks about Dash. At least in person, such conversations are often kicked-off when someone inquires about how I spend my time. Or what my "Dash" t-shirt references.
 
 I tend to start pretty broad, with what I hope is an accessible, non-jargon-filled overview of cryptocurrency. 
