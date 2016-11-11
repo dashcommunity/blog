@@ -21,4 +21,4 @@ currently deployed in TestNet (the current version in production is v0.12.0).
 
 ### Full Report
 
-The report in it's entirety can be found [here](https://github.com/dashcommunity/blog/blob/master/DashGovernanceSystem.pdf).
+The report in it's entirety can be found on [IOHK's webpage](https://iohk.io/research/library/#NSJ554WR) as well as [here](https://github.com/dashcommunity/blog/blob/master/DashGovernanceSystem.pdf).
