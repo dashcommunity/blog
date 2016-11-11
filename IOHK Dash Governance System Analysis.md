@@ -2,7 +2,7 @@
 
 Charles Hoskinson and the *Veritas Team* of *Input Output HK* have released a research report entitled *Dash Governance System: Analysis and Suggestions for Improvement*.
 
-###### Abstract
+##### Abstract
 
 The abstract of the report reads as follows:
 
@@ -19,6 +19,6 @@ cryptocurrencies and Dash is necessary for a complete understanding of the findi
 for example, the Dash whitepaper). The research was performed using the source code v0.12.1, which is
 currently deployed in TestNet (the current version in production is v0.12.0).
 
-###### Full Report
+##### Full Report
 
 The report in it's entirety can be found [here](https://github.com/dashcommunity/blog/blob/master/DashGovernanceSystem.pdf).
