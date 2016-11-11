@@ -1,6 +1,6 @@
 # Dash Governance System Report
 
-Charles Hoskinson and the **Veritas Team** of **Input Output HK** have released a research report entitled **Dash Governance System: Analysis and Suggestions for Improvement**.
+Charles Hoskinson and the *Veritas Team* of *Input Output HK* have released a research report entitled *Dash Governance System: Analysis and Suggestions for Improvement*.
 
 ###### Abstract
 
@@ -21,4 +21,4 @@ currently deployed in TestNet (the current version in production is v0.12.0).
 
 ###### Full Report
 
-The report in it's entirety can be found here.
+The report in it's entirety can be found [here](https://github.com/dashcommunity/blog/blob/master/DashGovernanceSystem.pdf).
