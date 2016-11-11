@@ -6,7 +6,7 @@ Charles Hoskinson and the *Veritas Team* of *Input Output HK* have released a re
 
 The abstract of the report reads as follows:
 
-This report contains the intermediate results of an analysis of the Dash Governance System, which is a
+> This report contains the intermediate results of an analysis of the Dash Governance System, which is a
 blockchain-based means for self-funding the development and advancement of the cryptocurrency Dash.
 During this review, weaknesses, both from an architectural and implementation point of view, were
 discovered. Presented are possible improvements as well as development proposals, which include
