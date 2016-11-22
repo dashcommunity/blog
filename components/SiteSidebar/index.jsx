@@ -5,7 +5,7 @@ import { config } from 'config'
 import SiteNav from '../SiteNav'
 import SiteLinks from '../SiteLinks'
 import './style.css'
-import profilePic from '../../pages/photo.jpg'
+import profilePic from '../../pages/Rion.jpeg'
 
 class SiteSidebar extends React.Component {
     render() {
@@ -13,18 +13,18 @@ class SiteSidebar extends React.Component {
         const isHome = location.pathname === prefixLink('/')
 
         let header = (
-        <header>
-          <Link style={ {    textDecoration: 'none',    borderBottom: 'none',    outline: 'none'} } to={ prefixLink('/') }>
-            <img src={prefixLink(profilePic)} width='75' height='75' />
-          </Link>
-          { isHome ? (
-            <h1><Link style={ {    textDecoration: 'none',    borderBottom: 'none',    color: 'inherit'} } to={ prefixLink('/') }> { config.siteAuthor } </Link></h1>
-            ) :
-            <h2><Link style={ {    textDecoration: 'none',    borderBottom: 'none',    color: 'inherit'} } to={ prefixLink('/') }> { config.siteAuthor } </Link></h2> }
-          <p>
-            { config.siteDescr }
-          </p>
-        </header>
+            <header>
+              <Link style={{textDecoration: 'none', borderBottom: 'none', outline: 'none'}} to={prefixLink('/')}>
+                <img src={prefixLink(profilePic)} width='75' height='75' />
+              </Link>
+              { isHome
+                ? <h1><Link style={{textDecoration: 'none', borderBottom: 'none', color: 'inherit'}} to={prefixLink('/') }> { config.siteAuthor } </Link></h1>
+                : <h2><Link style={{textDecoration: 'none', borderBottom: 'none', color: 'inherit'}} to={prefixLink('/') }> { config.siteAuthor } </Link></h2>
+              }
+              <p>
+                { config.siteDescr }
+              </p>
+            </header>
         )
 
         return (

@@ -14,10 +14,10 @@ class SitePost extends React.Component {
         const {route} = this.props
         const post = route.page.data
         const home = (
-        <div>
-          <Link className='gohome' to={ prefixLink('/') }> All Articles
-          </Link>
-        </div>
+            <div>
+              <Link className='gohome' to={ prefixLink('/') }> All Articles
+              </Link>
+            </div>
         )
 
         return (
@@ -42,7 +42,7 @@ class SitePost extends React.Component {
                 </div>
               </div>
             </div>
-            );
+        );
     }
 }
 
