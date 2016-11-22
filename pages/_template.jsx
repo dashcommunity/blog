@@ -15,7 +15,7 @@ class Template extends React.Component {
             <div className='wrapper'>
               { children }
             </div>
-            );
+        );
     }
 }
 

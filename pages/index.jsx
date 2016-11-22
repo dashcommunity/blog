@@ -25,18 +25,19 @@ class SiteIndex extends React.Component {
                 pageLinks.push(
                     <div className='blog-post'>
                       <time dateTime={ moment(datePublished).format('MMMM D, YYYY') }>
-                        { moment(datePublished).format('MMMM YYYY') }
+                        { moment(datePublished).format('YYYY.MM.DD') }
                       </time>
                       <span style={ {    padding: '5px'} }></span>
                       <span className='blog-category'>{ category }</span>
                       <h2><Link style={ {    borderBottom: 'none',} } to={ prefixLink(page.path) } > { title } </Link></h2>
                       <p dangerouslySetInnerHTML={ {    __html: description} } />
-                      <Link className='readmore' to={ prefixLink(page.path) }> Read
-                      </Link>
                     </div>
                 )
             }
         })
+
+        // <Link className='readmore' to={ prefixLink(page.path) }> Read
+        // </Link>
 
         return (
             <DocumentTitle title={ config.siteTitle }>

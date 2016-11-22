@@ -7,7 +7,6 @@ import '../../static/fonts/fontawesome/style.css'
 
 class SiteLinks extends React.Component {
     render() {
-
         return (
             <div className='blog-social'>
               <ul>
@@ -28,14 +27,12 @@ class SiteLinks extends React.Component {
                 <li>
                   <a href={ config.siteTelegramUrl }><i className='fa fa-paper-plane'></i></a>
                 </li>
-              </ul>
-              <ul>
                 <li>
                   <a href={ config.siteRssUrl }><i className='fa fa-rss'></i></a>
                 </li>
               </ul>
             </div>
-            );
+        );
     }
 }
 

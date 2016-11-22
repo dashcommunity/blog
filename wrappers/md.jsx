@@ -24,7 +24,7 @@ class MarkdownWrapper extends React.Component {
                 { template }
               </div>
             </DocumentTitle>
-            );
+        );
     }
 }
 
