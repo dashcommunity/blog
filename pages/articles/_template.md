@@ -8,9 +8,11 @@ category: "Some tags | Separated by | Pipes"
 description: "Some sentences describing the overall gist of your entry.  You can just put the first paragraph or few sentences of your post here if you want."
 ---
 
-*A quick note: The above section is referred to as the __front matter__.  Keep the `layout: post` as is.  The `date` field is formatted as YYYY-MM-DDThh:mm:ss.000Z.*
+*A quick note: The above section is referred to as the __front matter__.  Keep the `layout: post` as is.  The `date` field is formatted as `YYYY-MM-DDThh:mm:ss.000Z`.*
 
-Write the body of your post here.  Markdown syntax is supported (but you don't need to use it if you don't want to or know how).  It's pretty easy though.  You can use [GitHub's guide](https://guides.github.com/features/mastering-markdown/#examples) as a reference.  I've included pretty much everything you can do here in the body of this template as well, which I got from [Adam Pritchard's reference page](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+Write the body of your post here.  Markdown syntax is supported (but you don't need to use it if you don't want to or know how).  It's pretty easy though, you can use [GitHub's guide](https://guides.github.com/features/mastering-markdown/#examples) as a reference.  
+
+I've included pretty much everything you can do with markdown right here in the body of this template as well (which I got from [Adam Pritchard's reference page](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)).  It may help to switch between edit (or *view raw*) and view mode on GitHub to see how the syntax gets rendered.
 
 # Headers
 
@@ -285,10 +287,11 @@ This line is only separated by a single newline, so it's a separate line in the 
 
 They can't be added directly but you can add an image with a link to the video like this:
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE
-" target="_blank"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg"
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=https://www.youtube.com/watch?v=4y4c-yuLW_8
+" target="_blank"><img src="http://img.youtube.com/vi/https://www.youtube.com/watch?v=4y4c-yuLW_8/0.jpg"
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 Or, in pure Markdown, but losing the image sizing and border:
 
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/https://www.youtube.com/watch?v=4y4c-yuLW_8/0.jpg)](http://www.youtube.com/watch?v=https://www.youtube.com/watch?v=4y4c-yuLW_8)
+
 Referencing a bug by #bugID in your git commit links it to the slip. For example #1.
