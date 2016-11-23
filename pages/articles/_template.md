@@ -293,7 +293,7 @@ src="https://www.youtube.com/embed/4y4c-yuLW_8">
 </iframe>
 ```
 
-They may not render in the markdown itself, but they should when the `.md` file is converted back to html through the Gatsby templating engine.
+They may not render in the markdown itself, but they should when the `.md` file is converted back to a `.html` file through the Gatsby templating engine.
 
 # References
 
