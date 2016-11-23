@@ -285,13 +285,14 @@ This line is only separated by a single newline, so it's a separate line in the 
 
 # Youtube videos
 
-They can't be added directly but you can add an image with a link to the video like this:
+Youtube videos can be added to markdown pages as follows:
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=https://www.youtube.com/watch?v=4y4c-yuLW_8
-" target="_blank"><img src="http://img.youtube.com/vi/https://www.youtube.com/watch?v=4y4c-yuLW_8/0.jpg"
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
-Or, in pure Markdown, but losing the image sizing and border:
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/4y4c-yuLW_8">
+</iframe>
 
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/https://www.youtube.com/watch?v=4y4c-yuLW_8/0.jpg)](http://www.youtube.com/watch?v=https://www.youtube.com/watch?v=4y4c-yuLW_8)
+They may not render in the markdown itself, but they should when the `.md` file is converted back to html through the Gatsby templating engine.
+
+# References
 
 Referencing a bug by #bugID in your git commit links it to the slip. For example #1.
