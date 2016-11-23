@@ -16,6 +16,7 @@ class SiteIndex extends React.Component {
         const sortedPages = sortBy(this.props.route.pages, (page) => access(page, 'data.date')).reverse()
         sortedPages.forEach((page) => {
             if (access(page, 'file.ext') === 'md' && access(page, 'data.layout') === 'post') {
+                const author = access(page, 'data.author')
                 const title = access(page, 'data.title') || page.path
                 const description = access(page, 'data.description')
                 const datePublished = access(page, 'data.date')
@@ -23,20 +24,21 @@ class SiteIndex extends React.Component {
 
                 pageLinks.push(
                     <div className='blog-post'>
-                      <time dateTime={ moment(datePublished).format('MMMM D, YYYY') }>
-                        { moment(datePublished).format('YYYY.MM.DD') }
+                      <time dateTime={moment(datePublished).format('MMMM D, YYYY')}>
+                        {moment(datePublished).format('YYYY.MM.DD')}
                       </time>
-                      <span style={ {    padding: '5px'} }></span>
+                      <span style={{padding: '5px'}}></span>
                       <span className='blog-category'>{ category }</span>
-                      <h2><Link style={ {    borderBottom: 'none',} } to={ prefixLink(page.path) } > { title } </Link></h2>
-                      <p dangerouslySetInnerHTML={ {    __html: description} } />
+                      <h2><Link style={{borderBottom: 'none',}} to={prefixLink(page.path)}> { title } </Link></h2>
+                      <p>by <i>{ author }</i></p>
+                      <p dangerouslySetInnerHTML={{__html: description}} />
+                      <hr className='hr' />
                     </div>
                 )
             }
         })
 
-        // <Link className='readmore' to={ prefixLink(page.path) }> Read
-        // </Link>
+        // <Link className='readmore' to={ prefixLink(page.path) }>Read</Link>
 
         return (
             <DocumentTitle title={ config.siteTitle }>

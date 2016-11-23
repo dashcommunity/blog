@@ -1,13 +1,13 @@
-siteTitle = "Blog by Rion Daniel Gull"
-siteDescr = "I love life, liberty, and the fruits of the free market."
-siteAuthor = "Rion Daniel Gull"
+siteTitle = "Dash Community Blog"
+siteDescr = "Ideas precede software; share your thoughts!"
+siteAuthor = "Dash Community Blog"
 
-siteTelegramUrl = "#"
-siteTwitterUrl = "#"
-siteGithubUrl = "#"
-siteEmailUrl = "#"
-siteRssUrl = "#"
-siteVkUrl = "#"
+siteGithubUrl = "https://github.com/dashcommunity"
+siteTelegramUrl = "https://telegram.me/DashDigitalCash"
+siteTwitterUrl = "https://twitter.com/dashpay"
+siteSlackUrl = "http://dash-nation-invite.herokuapp.com/"
+siteYoutubeUrl = "http://www.youtube.com/c/DashOrg"
+siteRedditUrl = "https://www.reddit.com/r/dashpay"
 
 googleAnalyticsId = ""
 

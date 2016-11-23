@@ -26,18 +26,21 @@ class SitePost extends React.Component {
               <div className='blog-single'>
                 <div className='text'>
                   <h1>{ post.title }</h1>
-                  <div dangerouslySetInnerHTML={ {    __html: post.body} } />
+                  <div dangerouslySetInnerHTML={ {__html: post.body} } />
                   <div className='date-published'>
-                    <em>Published { moment(post.date).format('D MMM YYYY') }</em>
+                    <em>
+                      Published { moment(post.date).format('D MMM YYYY ') }
+                      by { post.author }
+                    </em>
                   </div>
                 </div>
                 <div className='footer'>
                   <ReadNext post={ post } {...this.props}/>
-                  <hr></hr>
+                  <hr className='hr' />
                   <p>
                     { config.siteDescr }
-                    <a href={ config.siteTwitterUrl }>
-                      <br></br> <strong>{ config.siteAuthor }</strong> on Twitter</a>
+                    <a href={ config.siteGithubUrl }>
+                      <br></br> <strong>{ config.siteAuthor }</strong> on GitHub</a>
                   </p>
                 </div>
               </div>

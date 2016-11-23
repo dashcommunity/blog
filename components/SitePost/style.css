@@ -1,3 +1,27 @@
+h1 {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+h2 {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+h3 {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+h4 {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+h5 {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+h6 {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
 .blog-post {
 	margin-bottom: 30px;
 }
@@ -19,19 +43,26 @@
 }
 .blog-post time {
 	font-size: 14px;
-	color: #222;
+	color: gray;
 	font-weight: 500;
 	text-transform: uppercase;
 }
 .blog-post .blog-category {
 	font-size: 14px;
-	color: #f7a046;
+	color: #1c75bc;
 	font-weight: 500;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 }
 .blog-post .readmore {
 	font-size: 16px;
 	color: #5d93ff;
+}
+.blog-post .hr {
+	background: gray;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	height: 1px;
+	width: 250px;
 }
 .blog-post .readmore:hover {
 	border-bottom: 1px solid;
@@ -58,12 +89,25 @@
 	max-width: 100%;
 	height: auto;
 }
+.blog-single .text a {
+	color: #1c75bc;
+}
 .blog-single .footer {
 	max-width: 630px;
 	margin-left: auto;
 	margin-right: auto;
 	line-height: 31px;
 	margin-bottom: 31px;
+}
+.blog-single .footer a {
+	color: #1c75bc;
+}
+.blog-single .footer .hr {
+	background: gray;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	height: 1px;
+	width: 250px;
 }
 .gohome {
 	position: fixed;
