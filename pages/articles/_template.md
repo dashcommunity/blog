@@ -8,11 +8,11 @@ category: "Some tags | Separated by | Pipes"
 description: "Some sentences describing the overall gist of your entry.  You can just put the first paragraph or few sentences of your post here if you want."
 ---
 
-*A quick note: The above section is referred to as the __front matter__.  Keep the `layout: post` as is.  The `date` field is formatted as `YYYY-MM-DDThh:mm:ss.000Z`.*
+*A quick note: The above section is referred to as the __front matter__.  Keep the `layout: post` as is.  The `date:` field is formatted as `YYYY-MM-DDThh:mm:ss.000Z`.*
 
 Write the body of your post here.  Markdown syntax is supported (but you don't need to use it if you don't want to or know how).  It's pretty easy though, you can use [GitHub's guide](https://guides.github.com/features/mastering-markdown/#examples) as a reference.  
 
-I've included pretty much everything you can do with markdown right here in the body of this template as well (which I got from [Adam Pritchard's reference page](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)).  It may help to switch between edit (or *view raw*) and view mode on GitHub to see how the syntax gets rendered.
+I've included pretty much everything you can do with markdown right here in the body of this template as well (which I got from [Adam Pritchard's reference page](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)).  It may help to switch between edit this file (or __raw__) and normal mode on GitHub to see how the syntax gets rendered.
 
 # Headers
 
