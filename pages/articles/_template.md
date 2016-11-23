@@ -287,9 +287,11 @@ This line is only separated by a single newline, so it's a separate line in the 
 
 Youtube videos can be added to markdown pages as follows:
 
+```
 <iframe width="420" height="315"
 src="https://www.youtube.com/embed/4y4c-yuLW_8">
 </iframe>
+```
 
 They may not render in the markdown itself, but they should when the `.md` file is converted back to html through the Gatsby templating engine.
 
