@@ -285,7 +285,7 @@ This line is only separated by a single newline, so it's a separate line in the 
 
 # Youtube videos
 
-Youtube videos can be added to markdown pages as follows:
+Youtube videos can be added to markdown pages which are slated for html conversion using the `iframe` tag.  I have enclosed the text in backticks so that it shows up on this page, but in practice you should __not__ enclose the code below in backticks.
 
 ```
 <iframe width="420" height="315"
