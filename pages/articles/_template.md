@@ -287,11 +287,18 @@ This line is only separated by a single newline, so it's a separate line in the 
 
 Youtube videos can be added to markdown pages which are slated for html conversion using the `iframe` tag.  I have enclosed the text in backticks so that it shows up on this page, but in practice you should __not__ enclose the code below in backticks.
 
-```
+<!-- ```
 <iframe width="420" height="315"
 src="https://www.youtube.com/embed/4y4c-yuLW_8">
 </iframe>
-```
+``` -->
+
+<!-- ```
+<object width="420" height="315"
+data="https://www.youtube.com/embed/4y4c-yuLW_8">
+</object>
+``` -->
+
 
 They may not render in the markdown itself, but they should when the `.md` file is converted back to a `.html` file through the Gatsby templating engine.
 

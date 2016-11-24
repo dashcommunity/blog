@@ -1,3 +1,4 @@
+/*rion's h1-h6s*/
 h1 {
 	margin-top: 5px;
 	margin-bottom: 5px;
@@ -91,6 +92,13 @@ h6 {
 }
 .blog-single .text a {
 	color: #1c75bc;
+}
+/*rion's iframe addition*/
+.blog-single .text iframe {
+	display: block;
+	border: 0px;
+	margin-top: 25px;
+	margin-bottom: 25px;
 }
 .blog-single .footer {
 	max-width: 630px;

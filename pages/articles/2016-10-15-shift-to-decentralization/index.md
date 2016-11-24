@@ -19,3 +19,5 @@ In order to assure sustainable growth, the fundamental principles that have made
 It must also be emphasized that centralization is not necessarily bad.  Centralized projects, in their incubation, can move efficiently because there is a simple governance model and pure ideas can be developed without excessive community deliberation.  They can also offer healthy financial incentives for early founding members to push through difficult start up challenges.
 
 However, to gain sustainable widespread adoption and resilience to outside attacks and competition, centralization and hierarchical governance must yield to decentralization and distributed, networked governance.  Getting people to build their ideas and projects on top of yours requires an explicit welcome to community collaboration and low barriers in making such connections...
+
+Testing embedded Youtube video:
