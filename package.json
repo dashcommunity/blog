@@ -1,14 +1,14 @@
 {
-  "version": "1.1.0",
-  "name": "gatsby-starter-lumen",
+  "version": "1.0.0",
+  "name": "dash-blog",
   "description": "Simple starter for Gatsby",
   "main": "n/a",
   "scripts": {
     "develop": "gatsby develop",
-    "build": "npm run clean & gatsby build & copy",
+    "build": "npm run clean; gatsby build; npm run copy",
     "clean:public": "rm -rf public",
     "clean": "npm run clean:public",
-    "copy:files": "cp pages/*.{pdf,txt,png,jpg,jpeg,gif} public/",
+    "copy:files": "find -E ./pages -regex '.*\\.(pdf|txt|png|jpg|jpeg|gif)$' -exec cp -v {} ./public ';'",
     "copy": "npm run copy:files",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",

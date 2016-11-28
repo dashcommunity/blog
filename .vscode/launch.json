@@ -7,9 +7,29 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
-            "program": "/Users/Rion/code/playground/gatsby/blog/node_modules/gatsby/lib/utils/build.js",
+            "name": "Develop",
+            "program": "${workspaceRoot}/node_modules/gatsby/bin/gatsby.js",
             "cwd": "${workspaceRoot}",
+            "args": ["develop"],
+            "sourceMaps": true
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Build",
+            "program": "${workspaceRoot}/node_modules/gatsby/bin/gatsby.js",
+            "cwd": "${workspaceRoot}",
+            "args": ["build"],
+            "sourceMaps": true
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Serve Public",
+            "program": "${workspaceRoot}/node_modules/gatsby/bin/gatsby.js",
+            "cwd": "${workspaceRoot}",
+            "args": ["serve-build"],
+            "sourceMaps": true
         },
         {
             "type": "node",

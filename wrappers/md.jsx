@@ -6,20 +6,16 @@ import { config } from 'config'
 
 class MarkdownWrapper extends React.Component {
     render() {
-      debugger;
         const {route} = this.props
         const post = route.page.data
-        console.log("post: ", post);
         let layout, template
 
         layout = post.layout
 
-        if (layout !== 'page') {
+        if (layout != 'page') {
             template = <SitePost {...this.props}/>
-            console.log("template for post: ", template)
         } else {
             template = <SitePage {...this.props}/>
-            console.log("template for page: ", template)
         }
 
         return (
