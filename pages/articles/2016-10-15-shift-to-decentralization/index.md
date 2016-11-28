@@ -20,4 +20,3 @@ It must also be emphasized that centralization is not necessarily bad.  Centrali
 
 However, to gain sustainable widespread adoption and resilience to outside attacks and competition, centralization and hierarchical governance must yield to decentralization and distributed, networked governance.  Getting people to build their ideas and projects on top of yours requires an explicit welcome to community collaboration and low barriers in making such connections...
 
-Testing embedded Youtube video:
