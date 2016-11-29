@@ -7,6 +7,10 @@
 .main-inner {
 	padding: 40px 35px;
 }
+/*rion addition*/
+.blog-page .text a {
+	color: #1c75bc;
+}
 @media screen and (max-width:1100px) {
 	.content {
 		lost-column: 2/4;
