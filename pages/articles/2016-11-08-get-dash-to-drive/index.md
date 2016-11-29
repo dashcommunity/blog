@@ -1,19 +1,26 @@
-# Get Dash to Drive
-##### by Pete Eyre
+---
+author: "Pete Eyre"
+title: "Get Dash to Drive"
+date: "2016-11-08T00:00:00.000Z"
+layout: post
+path: "/get-dash-to-drive/"
+category: "Driving"
+description: "Being the behind-the-scenes guy at DASH: Detailed, I do my best to inform folks about Dash. At least in person, such conversations are often kicked-off when someone inquires about how I spend my time. Or what my Dash t-shirt references."
+---
 
 Being the behind-the-scenes guy at *DASH: Detailed*, I do my best to inform folks about Dash. At least in person, such conversations are often kicked-off when someone inquires about how I spend my time. Or what my "Dash" t-shirt references.
 
-I tend to start pretty broad, with what I hope is an accessible, non-jargon-filled overview of cryptocurrency. 
+I tend to start pretty broad, with what I hope is an accessible, non-jargon-filled overview of cryptocurrency.
 
 After a bit of discourse the other party often expresses affinity for this paradigm-shifting tool. Especially as I almost never fail to highlight the fact that use of cryptocurrencies like Dash means a move away from federal reserve notes, and all the negative things that that monopolistic currency entails. Also, that "being your own bank" through the use of cryptos fosters consensual interactions, which are always a win-win for both parties.
 
 I'm no Amanda B. Johnson, mind you -- I am not a born wordsmith. But I do think it important to inform other individuals about how they can peacefully disempower the institutions they dislike while empowering themselves.
 
-I often give the person a *DASH: Detailed* outreach/business card so that they have a resource to pursue at their own pace. The cards, by the way, were recently redsigned to include a more prominent link to the [Dash YouTube channel](http://youtube.com/dashorg) and a QR code to [Dash School](https://www.youtube.com/playlist?list=PLiFMZOlhgsYKKOUOVjQjESCXfR1cCYCod), which is an excellent resource for someone new to this space. 
+I often give the person a *DASH: Detailed* outreach/business card so that they have a resource to pursue at their own pace. The cards, by the way, were recently redsigned to include a more prominent link to the [Dash YouTube channel](http://youtube.com/dashorg) and a QR code to [Dash School](https://www.youtube.com/playlist?list=PLiFMZOlhgsYKKOUOVjQjESCXfR1cCYCod), which is an excellent resource for someone new to this space.
 
 ![DASH: Detailed outreach/business cards](http://i.imgur.com/QqYAk3r.png)
 
-At this point, one of the most commonly-asked questions I receive is, how do I get some Dash? 
+At this point, one of the most commonly-asked questions I receive is, how do I get some Dash?
 
 A good question indeed.
 

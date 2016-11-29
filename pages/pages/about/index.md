@@ -1,4 +1,8 @@
-# Dash Community Blog
+---
+title: "Dash Community Blog"
+layout: page
+path: "/about"
+---
 
 There's a new blog in town!  Anyone is welcome to create a blog post, simply follow the updated [guide for creating a post](https://github.com/dashcommunity/guides/blob/master/create_blog_post.md).  If people are interested, I can make this process much easier by creating a little web application to guide you through the process.  For now we'll do things manually.  
 

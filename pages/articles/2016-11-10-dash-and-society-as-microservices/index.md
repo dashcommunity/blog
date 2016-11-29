@@ -1,4 +1,12 @@
-# Dash And Society As Microservices
+---
+author: "Donnie Brandt"
+title: "Dash And Society As Microservices"
+date: "2016-11-10T00:00:00.000Z"
+layout: post
+path: "/dash-and-society-as-microservices/"
+category: "Microservices"
+description: "There is a good chance that you, dear reader, are not a software architect, so the term 'microservice', heck, even 'Dash' may not mean much to you. Keep reading and I will explain these terms and why they matter."
+---
 
 There is a good chance that you, dear reader, are not a software architect, so the term [microservice](https://en.wikipedia.org/wiki/Microservices), heck, even [Dash](https://www.dash.org) may not mean much to you. Keep reading and I will explain these terms and why they matter.
 

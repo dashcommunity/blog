@@ -1,0 +1,14 @@
+siteTitle = "Dash Community Blog"
+siteDescr = "Ideas precede software; share your thoughts!"
+siteAuthor = "Dash Community Blog"
+
+siteGithubUrl = "https://github.com/dashcommunity"
+siteTelegramUrl = "https://telegram.me/DashDigitalCash"
+siteTwitterUrl = "https://twitter.com/dashpay"
+siteSlackUrl = "http://dash-nation-invite.herokuapp.com/"
+siteYoutubeUrl = "http://www.youtube.com/c/DashOrg"
+siteRedditUrl = "https://www.reddit.com/r/dashpay"
+
+googleAnalyticsId = ""
+
+linkPrefix = '/blog'
