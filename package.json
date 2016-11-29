@@ -5,11 +5,10 @@
   "main": "n/a",
   "scripts": {
     "develop": "gatsby develop",
-    "build": "npm run clean; gatsby build; npm run copy",
-    "clean:public": "rm -rf public",
-    "clean": "npm run clean:public",
-    "copy:files": "find -E ./pages -regex '.*\\.(pdf|txt|png|jpg|jpeg|gif)$' -exec cp -v {} ./public ';'",
-    "copy": "npm run copy:files",
+    "clean": "rm -rf public",
+    "build": "gatsby build",
+    "copy": "find -E ./pages -regex '.*\\.(pdf|txt|png|jpg|jpeg|gif)$' -exec cp -v {} ./public ';'",
+    "rebuild": "npm run clean; npm run build; npm run copy",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "gatsby build --prefix-links && gh-pages -d public"
