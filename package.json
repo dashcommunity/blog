@@ -32,6 +32,7 @@
     "history": "^2.1.1",
     "lodash": "^4.14.1",
     "markdown-it": "^6.0.2",
+    "medium-draft": "^0.4.0",
     "moment": "^2.14.1",
     "react": "^15.3.0",
     "react-document-title": "^2.0.2",

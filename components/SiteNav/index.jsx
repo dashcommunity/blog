@@ -17,6 +17,10 @@ class SiteNav extends React.Component {
                   <Link to={prefixLink('/about/')} className={location.pathname === prefixLink('/about/') ? "current" : null}> About
                   </Link>
                 </li>
+                <li>
+                  <Link to={prefixLink('/compose/')} className={location.pathname === prefixLink('/compose/') ? "current" : null}> Compose
+                  </Link>
+                </li>
               </ul>
             </nav>
         );
