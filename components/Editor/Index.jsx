@@ -77,7 +77,7 @@ export default class MyEditor extends React.Component {
   }
 
   createOnGitHub () {
-    var octo = new Octokat({token: '3b70a2a4163f6e1e0cf3432ad28815ceeb8201d1'});
+    var octo = new Octokat({token: ''});
     var repo = octo.repos('riongull', 'blog');
     var author = "Rion Gull"
     var contents = `
@@ -104,7 +104,7 @@ export default class MyEditor extends React.Component {
   }
 
   saveToGitHub () {
-    var octo = new Octokat({token: '3b70a2a4163f6e1e0cf3432ad28815ceeb8201d1'});
+    var octo = new Octokat({token: ''});
     var repo = octo.repos('riongull', 'blog');
     var path = 'pages/articles/drafts/somePost';
     var contents = JSON.stringify(convertToRaw(this.state.editorState.getCurrentContent()));
@@ -159,12 +159,13 @@ export default class MyEditor extends React.Component {
   fetchFromGitHub (event) {
     event.preventDefault();
 
+    const token = this.refs.fetch_token.value;
     const username = this.refs.fetch_user.value;
     const reponame = this.refs.fetch_repo.value;
     const foldername = this.refs.fetch_folder.value;
     const filename = this.refs.fetch_file.value;
 
-    var octo = new Octokat({token: '3b70a2a4163f6e1e0cf3432ad28815ceeb8201d1'});
+    var octo = new Octokat({token: `${token}`});
     var repo = octo.repos(`${username}`, `${reponame}`);
     var path = `pages/articles/drafts/${foldername}`;
 
@@ -200,13 +201,14 @@ export default class MyEditor extends React.Component {
   postToGitHub (event) {
     event.preventDefault();
 
+    const token = this.refs.token.value;
     const username = this.refs.user.value;
     const reponame = this.refs.repo.value;
     const foldername = this.refs.folder.value;
     const filename = this.refs.file.value;
     const overwrite = this.refs.overwrite_checkbox.checked;  // checked: true; unchecked: falso
 
-    var octo = new Octokat({token: '3b70a2a4163f6e1e0cf3432ad28815ceeb8201d1'});
+    var octo = new Octokat({token: `${token}`});
     var repo = octo.repos(`${username}`, `${reponame}`);
     var path = `pages/articles/drafts/${foldername}`;
     var contents = JSON.stringify(convertToRaw(this.state.editorState.getCurrentContent()));
@@ -273,8 +275,10 @@ export default class MyEditor extends React.Component {
           {/*<button onClick={this.fetchFromGitHub}>Fetch from GitHub</button><br/><br/>*/}
 
           <div>
+            Load a draft entry from GitHub
             <form onSubmit={this.fetchFromGitHub} >
               <input type="text" placeholder="GitHub username" ref="fetch_user"></input><br/>
+              <input type="password" placeholder="GitHuB access token" ref="fetch_token"></input><br/>
               <input type="text" placeholder="GitHub repository" ref="fetch_repo"></input><br/>
               <input type="text" placeholder="Folder name" ref="fetch_folder"></input><br/>
               <input type="text" placeholder="File name" ref="fetch_file"></input><br/>
@@ -283,8 +287,10 @@ export default class MyEditor extends React.Component {
           </div><br/>
 
           <div>
+            Save your draft above to GitHub
             <form onSubmit={this.postToGitHub} >
               <input type="text" placeholder="GitHub username" ref="user"></input><br/>
+              <input type="password" placeholder="GitHub access token" ref="token"></input><br/>
               <input type="text" placeholder="GitHub repository" ref="repo"></input><br/>
               <input type="text" placeholder="Folder name" ref="folder"></input><br/>
               <input type="text" placeholder="File name" ref="file"></input><br/>
