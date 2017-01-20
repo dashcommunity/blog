@@ -1,12 +1,12 @@
-
 ---
 author: "Satoshi Nakamoto"
 title: "Why I Love Dash"
 date: "2017-01-20T14:30:00.000Z"
-layout: "post"
+layout: post
 path: "/path/"
 description: "undefined"
----### Default editor Content
+---
+### Default editor Content
 
 Hello, this is the default editor content
 
