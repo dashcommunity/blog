@@ -2,20 +2,22 @@ import React from 'react'
 import Octokat from 'octokat'
 import { convertToRaw, convertFromRaw } from 'draft-js'
 import { stateToMarkdown } from 'draft-js-export-markdown'
+import moment from 'moment'
 
 
 export const publish = (values) => {
   const { token, author, title, sample, overwrite } = values;
-  const username = `riongull`; // `dashcommunity` when ready (after testing)
+  const username = `dashcommunity`; // `riongull` for testing, dashcommunity` for production
   const repo = `blog`;
-  const date = `2017-01-20`;
+  const date = moment().format('YYYY-MM-DD');
+  const time = moment().format("HH:mm:ss.SSS");
   const path = title.replace(/\s+/g, '-').toLowerCase();
   const folder = `${date}-${path}`;
   const markdownFrontMatter = 
 `---
 author: "${author}"
 title: "${title}"
-date: "${date}T14:30:00.000Z"
+date: "${date}T${time}Z"
 layout: post
 path: "/${path}/"
 description: "${sample}"

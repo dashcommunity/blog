@@ -12,8 +12,8 @@ export const rawDefaultEditorContent = {
     { "key": "eoqb4", "text": "And a nice blockquote below:", "type": "unstyled", "depth": 0, "inlineStyleRanges": [], "entityRanges": [], "data": {} },
     { "key": "80ubb", "text": "Ideas precede software; share your thoughts!", "type": "blockquote", "depth": 0, "inlineStyleRanges": [], "entityRanges": [], "data": {} },
     { "key": "aipqj", "text": "And that ends this default editor content.", "type": "unstyled", "depth": 0, "inlineStyleRanges": [], "entityRanges": [], "data": {} }
-    ]
-  }
+  ]
+}
 
     // { "key": "dh5ai", "text": "And finally, some todo items:", "type": "unstyled", "depth": 0, "inlineStyleRanges": [], "entityRanges": [], "data": {} },
     // { "key": "429oh", "text": "do this", "type": "todo", "depth": 0, "inlineStyleRanges": [], "entityRanges": [], "data": { "checked": false } },
