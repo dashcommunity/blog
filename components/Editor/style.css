@@ -8,3 +8,6 @@
  border: 0px solid grey;
  padding: 6px;
 }
+.md-RichEditor-editor .md-RichEditor-blockquote {
+ background-color: orange;
+}
