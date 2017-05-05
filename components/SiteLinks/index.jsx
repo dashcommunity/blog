@@ -1,37 +1,39 @@
-import React from 'react'
-import { RouteHandler, Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
-import { config } from 'config'
-import './style.css'
-import '../../static/fonts/fontawesome/style.css'
+import React from 'react';
+import { config } from 'config';
+import './style.css';
+import '../../static/fonts/fontawesome/style.css';
 
 class SiteLinks extends React.Component {
+    constructor() {
+        super();
+
+        this.shareLinks = [
+          { href: config.siteGithubUrl, iconClass: 'github' },
+          { href: config.siteRedditUrl, iconClass: 'reddit-alien' },
+          { href: config.siteYoutubeUrl, iconClass: 'youtube' },
+          { href: config.siteSlackUrl, iconClass: 'slack' },
+          { href: config.siteTelegramUrl, iconClass: 'paper-plane' },
+          { href: config.siteTwitterUrl, iconClass: 'twitter' },
+        ];
+    }
+
     render() {
+        const linkMarkup = this.shareLinks.map(link => (
+          <li>
+            <a href={link.href}>
+              <i className={`fa fa-${link.iconClass}`} />
+            </a>
+          </li>
+        ));
+
         return (
-            <div className='blog-social'>
-              <ul>
-                <li>
-                  <a href={ config.siteGithubUrl }><i className='fa fa-github'></i></a>
-                </li>
-                <li>
-                  <a href={ config.siteRedditUrl }><i className='fa fa-reddit-alien'></i></a>
-                </li>
-                <li>
-                  <a href={ config.siteYoutubeUrl }><i className='fa fa-youtube'></i></a>
-                </li>
-                <li>
-                  <a href={ config.siteSlackUrl }><i className='fa fa-slack'></i></a>
-                </li>
-                <li>
-                  <a href={ config.siteTelegramUrl }><i className='fa fa-paper-plane'></i></a>
-                </li>
-                <li>
-                  <a href={ config.siteTwitterUrl }><i className='fa fa-twitter'></i></a>
-                </li>
-              </ul>
-            </div>
+          <div className="blog-social">
+            <ul>
+              { linkMarkup }
+            </ul>
+          </div>
         );
     }
 }
 
-export default SiteLinks
+export default SiteLinks;

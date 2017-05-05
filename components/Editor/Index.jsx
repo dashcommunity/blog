@@ -1,61 +1,73 @@
-import React from 'react'
-import { RouteHandler, Link } from 'react-router'
-import DocumentTitle from 'react-document-title'
-import { EditorState, ContentState, convertFromRaw, convertToRaw, convertFromHTML} from 'draft-js'
-import { Editor, createEditorState} from 'medium-draft'
-import 'medium-draft/lib/index.css'
-import './style.css'
+import React from 'react';
+import { EditorState, convertFromRaw, convertToRaw } from 'draft-js';
+import { Editor } from 'medium-draft';
+import 'medium-draft/lib/index.css';
+import './style.css';
 
 export default class MyEditor extends React.Component {
-  constructor(props) {
-    super(props);
-    
-    const state = EditorState.createWithContent(convertFromRaw(this.props.editorContent));
-    this.state = {editorState: state};
+    constructor(props) {
+        super(props);
 
-    this.onChange = (editorState) => {
-      this.setState({editorState: editorState});
-      const rawEditorContent = JSON.stringify(convertToRaw(this.state.editorState.getCurrentContent()));
-      localStorage.setItem('rawEditorContent',rawEditorContent);
-      this.logData();
+        this.propTypes = {
+            editorContent: React.PropTypes.any,
+        };
+
+        const state = EditorState.createWithContent(convertFromRaw(this.props.editorContent));
+        this.state = { editorState: state };
+
+        this.onChange = (editorState) => {
+            this.setState({ editorState });
+            const rawEditorContent = JSON
+                .stringify(convertToRaw(this.state.editorState.getCurrentContent()));
+            localStorage.setItem('rawEditorContent', rawEditorContent);
+            this.logData();
+        };
+
+        this.logData = this.logData.bind(this);
     }
 
-    this.logData = this.logData.bind(this);
-  }
+    componentDidMount() {
+        // this.refs.editor.focus();
+    }
 
-  componentWillReceiveProps(props) {
-    console.log('props:', props)
-    const editorStateFromPassedProps = EditorState.createWithContent(convertFromRaw(props.editorContent));
-    console.log('editorStateFromPassedProps:', editorStateFromPassedProps)
-    this.setState({editorState: editorStateFromPassedProps})
-  }
+    componentWillReceiveProps(props) {
+        console.log('props:', props);
+        const editorStateFromPassedProps = EditorState
+            .createWithContent(convertFromRaw(props.editorContent));
+        console.log('editorStateFromPassedProps:', editorStateFromPassedProps);
+        this.setState({ editorState: editorStateFromPassedProps });
+    }
 
-  componentDidMount() {
-    // this.refs.editor.focus();
-  }
+    logData() {
+        console.group('Current Data:');
+        console.info('selection:', this.state.editorState.getSelection().toJS());
+        console.info('editor content - object:', this.state.editorState.getCurrentContent().toJS());
+        console.info('editor content - raw:',
+                     JSON.stringify(convertToRaw(this.state.editorState.getCurrentContent())));
+        console.groupEnd();
+        // window.ga('send', 'event', 'draftjs', 'log-data');
+    }
 
-  logData() {
-    console.group("Current Data:");
-    console.info("selection:", this.state.editorState.getSelection().toJS());
-    console.info("editor content - object:", this.state.editorState.getCurrentContent().toJS());
-    console.info("editor content - raw:", JSON.stringify(convertToRaw(this.state.editorState.getCurrentContent())));
-    console.groupEnd()
-    // window.ga('send', 'event', 'draftjs', 'log-data');
-  }
-
-  render() {
-    return (
-      <div id="content">  
-        <div className="editor">
-          <Editor ref="editor" editorState={this.state.editorState} onChange={this.onChange}/>
-        </div>
-      </div>
-    );
-  }
+    render() {
+        return (
+          <div id="content">
+            <div className="editor">
+              <Editor
+                ref={(editor) => { this.editor = editor }}
+                editorState={this.state.editorState}
+                onChange={this.onChange} />
+            </div>
+          </div>
+        );
+    }
 }
 
+MyEditor.propTypes = {
+    editorContent: React.PropTypes.any,
+};
+
 // was in constructor
-    // code for gatsby develop only 
+    // code for gatsby develop only
     // these lines throw errors with Gatsby build, because of this: https://github.com/facebook/draft-js/issues/586
     // can use them with gatsby develop for playing around
     // const sampleMarkup = '<b>Bold text</b>, <i>Italic text</i>, unstyled text<br/ ><a href="http://www.facebook.com">Example link</a>';
@@ -63,7 +75,7 @@ export default class MyEditor extends React.Component {
     // const state = ContentState.createFromBlockArray(blocksFromHTML);
     // this.state = {editorState: EditorState.createWithContent(state)};
 
-    // console.group("Constructor Data");    
+    // console.group("Constructor Data");
     // console.info("sampleMarkup:", sampleMarkup);
     // console.info("blocksFromHTML:", blocksFromHTML);
     // console.info("state:", state);
@@ -72,14 +84,14 @@ export default class MyEditor extends React.Component {
     // this.loadFromGitHub = this.loadFromGitHub.bind(this);
     // this.saveToGitHub = this.saveToGitHub.bind(this);
     // this.createOnGitHub = this.createOnGitHub.bind(this);
-// end was in constructor    
+// end was in constructor
 
   // loadFromGitHub() {
   //   // window.ga('send', 'event', 'draftjs', 'load-data', 'ajax');
   //   this.setState({
   //     placeholder: 'Loading...',
   //   });
-    
+
   //   const req = new XMLHttpRequest();
   //   req.open('GET', 'https://api.github.com/repos/riongull/blog/contents/pages/articles/data.json', true);
   //   req.onreadystatechange = () => {
@@ -88,7 +100,7 @@ export default class MyEditor extends React.Component {
   //       const responseObj = JSON.parse(responseText);
   //       const base64content = responseObj.content;
   //       const content = JSON.parse(window.atob(base64content));
-        
+
   //       console.group("Load Data")
   //       console.info("responseText:", responseText);
   //       console.info("responseObj:", responseObj);
@@ -118,7 +130,7 @@ export default class MyEditor extends React.Component {
 
   //   const endpoint = "https://api.github.com/repos/riongull/blog/contents/pages/articles/drafts/new.json"
   //   var params = {
-  //     message: "creating a file", 
+  //     message: "creating a file",
   //     content: "test text",
   //   }
 
@@ -147,7 +159,7 @@ export default class MyEditor extends React.Component {
   //     \`this is some code\`
   //     1. this is a list
   //     2. with two items
-  //     And here's the **final** sentence.  Okay just one more with a [link](www.example.com). 
+  //     And here's the **final** sentence.  Okay just one more with a [link](www.example.com).
   //   `
   //   var config = {
   //     message: 'Adding a file',
@@ -169,7 +181,7 @@ export default class MyEditor extends React.Component {
   //   var path = 'pages/articles/drafts/somePost';
   //   var contents = JSON.stringify(convertToRaw(this.state.editorState.getCurrentContent()));
   //   console.log(contents);
-    
+
   //   var config = {
   //     message: 'Uploaded Draftjs state from editor',
   //     content: window.btoa(contents),
@@ -195,7 +207,7 @@ export default class MyEditor extends React.Component {
           //   Load a draft entry from GitHub
           //   <form onSubmit={this.fetchFromGitHub} >
           //     <input type="text" placeholder="GitHub username" ref="fetch_user"></input><br/>
-          //     <input type="password" placeholder="GitHuB access token" ref="fetch_token"></input><br/>
+          //     <input type="password" placeholder="GitHuB access token" ref="fetch_token" /><br/>
           //     <input type="text" placeholder="GitHub repository" ref="fetch_repo"></input><br/>
           //     <input type="text" placeholder="Folder name" ref="fetch_folder"></input><br/>
           //     <input type="text" placeholder="File name" ref="fetch_file"></input><br/>
@@ -211,7 +223,8 @@ export default class MyEditor extends React.Component {
           //     <input type="text" placeholder="GitHub repository" ref="repo"></input><br/>
           //     <input type="text" placeholder="Folder name" ref="folder"></input><br/>
           //     <input type="text" placeholder="File name" ref="file"></input><br/>
-          //     <input type="checkbox" id="cbox1" ref="overwrite_checkbox"></input><label for="cbox1">overwrite github file</label><br/>
+          //     <input type="checkbox" id="cbox1" ref="overwrite_checkbox" />
+          //     <label for="cbox1">overwrite github file</label><br/>
           //     <button type="submit">Post to GitHub</button>
           //   </form>
           // </div>

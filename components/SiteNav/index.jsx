@@ -1,34 +1,43 @@
-import React from 'react'
-import { RouteHandler, Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
-import './style.css'
+import React from 'react';
+import { prefixLink } from 'gatsby-helpers';
+import Link from '../PrefixedLink';
+import './style.css';
 
 class SiteNav extends React.Component {
+    constructor() {
+        super();
+        this.navLinks = [
+            { text: 'Articles', route: '/' },
+            { text: 'About', route: '/about/' },
+            { text: 'Compose', route: '/compose/' },
+        ];
+    }
+
+    checkIfRouteIsActive(path) {
+        return this.props.location.pathname === prefixLink(path) ? 'current' : null;
+    }
+
     render() {
-        const {location} = this.props
+        const linkList = this.navLinks.map(link => (
+          <li>
+            <Link to={link.route} className={this.checkIfRouteIsActive(link.route)}>
+              { link.text }
+            </Link>
+          </li>
+        ));
+
         return (
-            <nav className='blog-nav'>
-              <ul>
-                <li>
-                  <Link to={prefixLink('/')} className={location.pathname === prefixLink('/') ? "current" : null}> Articles
-                  </Link>
-                </li>
-                <li>
-                  <Link to={prefixLink('/about/')} className={location.pathname === prefixLink('/about/') ? "current" : null}> About
-                  </Link>
-                </li>
-                <li>
-                  <Link to={prefixLink('/compose/')} className={location.pathname === prefixLink('/compose/') ? "current" : null}> Compose
-                  </Link>
-                </li>
-              </ul>
-            </nav>
+          <nav className="blog-nav">
+            <ul>
+              { linkList }
+            </ul>
+          </nav>
         );
     }
 }
 
 SiteNav.propTypes = {
     location: React.PropTypes.object,
-}
+};
 
-export default SiteNav
+export default SiteNav;

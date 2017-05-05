@@ -1,20 +1,38 @@
 {
   "extends": "eslint-config-airbnb",
   "rules": {
-    "indent": [2, 2, {"SwitchCase": 1}],
+    "indent": [1, 4, {"SwitchCase": 1}],
     "no-console": [0],
     "func-names": [0],
-    "semi": [2, "never"],
-    "no-extra-semi": [2],
-    "space-before-function-paren": [2, "always"],
+    "semi": [0],
+    "no-extra-semi": [1],
+    "space-before-function-paren": [0],
     "no-else-return": [0],
     "space-infix-ops": [0],
     "react/prefer-es6-class": [0],
     "react/prefer-stateless-function": [0],
     "import/no-unresolved": [0],
     "global-require": [0],
+    "import/no-extraneous-dependencies": [0],
+    "no-unused-vars": [1],
+    "max-len": [1],
+    "jsx-quotes": [1],
+    "jsx-a11y/img-has-alt": [1],
+    "jsx-a11y/img-redundant-alt": [1],
+    "comma-dangle": [1],
+    "react/jsx-closing-bracket-location": [0],
+    "eqeqeq": [0],
+    "react/jsx-indent": [1],
+    "quotes": [1],
+    "react/jsx-curly-spacing": [1],
+    "no-use-before-define": [0]
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
   },
   "globals": {
-    "__PREFIX_LINKS__": true,
-  },
+    "__PREFIX_LINKS__": true
+  }
 }

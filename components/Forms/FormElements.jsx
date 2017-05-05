@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { findDOMNode } from 'react-dom'
 
 export const Select = (field) => {
-  const refCb = (el) => {if (el) {findDOMNode(el).focus(); findDOMNode(el).blur();}}
+  const refCb = (el) => { if (el) { findDOMNode(el).focus(); findDOMNode(el).blur(); } }
   return (
     <div className="form-group row"> {/* pass in passContent here maybe? */}
       <label className="col-2 col-form-label" >Action</label>
@@ -19,6 +19,52 @@ export const Select = (field) => {
     </div>
   )
 }
+
+export const Input = (field) => (
+  <div className="form-group row">
+    <label className="col-2 col-form-label" htmlFor={field.input.name}>
+      {field.labelText}
+    </label>
+    <div className="col-10">
+      <input className="form-control" {...field} {...field.input} />
+    </div>
+  </div>
+)
+
+export const Checkbox = (field) => {
+  // console.log(field);
+  return (
+    <div className="form-group row">
+      <label className="col-2" htmlFor={field.input.name}></label>
+      <div className="col-10">
+        <div className="form-check">
+          <label className="form-check-label">
+            <input className="form-check-input" {...field} {...field.input}/> {field.descText}
+          </label>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export const TextArea = (field) => {
+  // console.log(field);
+  return (
+    <div className="form-group row">
+      <label className="col-2 col-form-label" htmlFor={field.input.name}>
+        {field.labelText}
+      </label>
+      <div className="col-10">
+        <textarea className="form-control" rows="3" {...field} {...field.input}></textarea>
+      </div>
+    </div>
+  )
+}
+
+/* import React, { Component } from 'react'
+import { findDOMNode } from 'react-dom'
+
+
 
 export const Input = (field) => {
   // console.log(field);
@@ -62,4 +108,4 @@ export const TextArea = (field) => {
       </div>
     </div>
   )
-}
+}*/
